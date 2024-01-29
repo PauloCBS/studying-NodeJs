@@ -6,12 +6,14 @@ const app = express();
 const PORT = 3333;
 //porta a qual será feita a requisição.
 
-//testando metodo GET: onde o / representa a rota que será acessada no navegador, (reques, response) representa a função 
-app.get("/message/:id", (req, res) => {
-    res.send(`request id ${req.params.id}`);
-});
-//res serve para devolver uma resposta. Podemos usar o req para enviar ou obter informações. 
 
+app.post("/user", (req, res) => { 
+    
+res.send("You have called the POST method");
+//note that the main difference between route params and query params is that no params is necessary. 
+})
 
 app.listen(PORT, () => console.log(`server is running on port ${PORT}`))
 //app escute a porta 3333 e retorna uma mensagem de que o servidor está rodando na porta 3333.
+
+ 
