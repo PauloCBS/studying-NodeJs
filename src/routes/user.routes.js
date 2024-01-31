@@ -13,6 +13,7 @@ function myMyddleware(req, res, next){
  if(!req.body.isAdmin){
     return res.status(401).json({message: "Você não é admin"});
  }
+ //foi criada uma função simples para verificar se o user é ou não um usuario adm. e se não for adm emitir a mensagem e o status code 401.
 
  next()
  //chama a proxima função que esta na fila e dessa forma ele segue para o usar controller.create.
