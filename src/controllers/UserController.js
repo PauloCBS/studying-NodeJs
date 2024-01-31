@@ -13,7 +13,7 @@ delete - DELETE para remover um registro
 create(req, res){
     
     const {name, email, password} = req.body;
-    res.json({name, email, password});
+    res.status(201).json({name, email, password});
     //this way we do the request from the json file inside the body of our insomnia body. 
     //res.send(`Usuário: ${name}. E-mail: ${email}. Password: ${password}`);
     //note that the main difference between route params and query params is that no params is necessary. 
