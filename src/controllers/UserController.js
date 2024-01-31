@@ -25,7 +25,7 @@ create(req, res){
         throw new AppError("Nome é obrigatório!");
       };
         
-        response.status(201).json( {name, email, password} );
+        res.status(201).json( {name, email, password} );
     };
 
 }
